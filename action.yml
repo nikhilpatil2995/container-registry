@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete old images
-        uses: actions/checkout@v2
+        uses: nikhilpatil2995/container-registry@main
         with:
           image-names: ubuntu
 #           cut-off: One month ago UTC
