@@ -24,4 +24,4 @@ jobs:
 #           keep-at-least: 1
           untagged-only: false
           account-type: personal
-          token: ${{ secrets.token }}
+          token: ${{ secrets.TOKEN }}
