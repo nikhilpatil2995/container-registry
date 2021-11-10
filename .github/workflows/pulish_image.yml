@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Login to GitHub Container Registry
-      uses: nikhilpatil2995/container-registry@v1
+      uses: nikhilpatil2995/container-registry@v2
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
