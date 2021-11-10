@@ -2,7 +2,7 @@ name: Delete old container images
 
 on:
   schedule:
-    - cron: '5 * * * *'  # Run it in every 5 minute
+    - cron: '*/5 * * * *'  # Run it in every 5 minute
 # on:
 #   workflow_dispatch:
 #     inputs:
@@ -17,11 +17,11 @@ jobs:
       - name: Delete old images
         uses: actions/checkout@v2
         with:
-          image-names: ubuntu
-          cut-off: One month ago UTC
-#           cut-off: 2 seconds ago UTC+2
+          image-names: ghcr.io/nikhilpatil2995/ubuntu:3
+#           cut-off: One month ago UTC
+          cut-off: 2 seconds ago UTC+2
           timestamp-to-use: created_at
 #           keep-at-least: 1
           untagged-only: false
           account-type: personal
-          token: ${{ secret.token }}
+          token: ${{ secrets.token }}
