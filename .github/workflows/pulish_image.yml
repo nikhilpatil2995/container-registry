@@ -11,6 +11,6 @@ jobs:
 
     - name: Build the hello-world Docker image
       run: |
-        echo $CR_PAT | docker login ghcr.io -u nikhilpatil2995 --password-stdin
+        echo $token | docker login ghcr.io -u nikhilpatil2995 --password-stdin
       env:
-        CR_PAT: ${{ secrets.CR_PAT }}
+        CR_PAT: ${{ secrets.token }}
