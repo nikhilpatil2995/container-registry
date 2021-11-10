@@ -11,7 +11,7 @@ on:
 #         required: true      
 jobs:
   clean-ghcr:
-    name: Delete old unused container images
+    name: Delete old unused images
     runs-on: ubuntu-latest
     steps:
       - name: Delete old images
