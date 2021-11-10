@@ -19,6 +19,7 @@ jobs:
         with:
           image-names: dev
           cut-off: One month ago UTC
+          timestamp-to-use: created_at
 #           keep-at-least: 1
           untagged-only: true
           account-type: personal
