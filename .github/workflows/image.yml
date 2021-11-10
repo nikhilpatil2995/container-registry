@@ -13,4 +13,4 @@ jobs:
       run: |
         docker login ghcr.io -u 062995 -p $token
       env:
-        CR_PAT: ${{ secrets.token }}
+        token: ${{ secrets.token }}
