@@ -24,4 +24,4 @@ jobs:
 #           keep-at-least: 1
           untagged-only: false
           account-type: personal
-          token: ${{ github.token }}
+          token: "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"
