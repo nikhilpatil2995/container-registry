@@ -1,14 +1,14 @@
 name: Delete old container images
 
-# on:
-#   schedule:
-#     - cron: '0 0 0 * *'  # the first day of the month
 on:
-  workflow_dispatch:
-    inputs:
-      package_name:
-        description: 'The name of the package to delete'     
-        required: true      
+  schedule:
+    - cron: '5 * * * *'  # Run it in every 5 minute
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       package_name:
+#         description: 'The name of the package to delete'     
+#         required: true      
 jobs:
   clean-ghcr:
     name: Delete old unused container images
@@ -18,7 +18,8 @@ jobs:
         uses: nikhilpatil2995/container-registry@v1
         with:
           image-names: dev
-          cut-off: One month ago UTC
+#           cut-off: One month ago UTC
+          cut-off: 1 min ago
           timestamp-to-use: created_at
 #           keep-at-least: 1
           untagged-only: true
