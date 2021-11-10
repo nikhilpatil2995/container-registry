@@ -1,0 +1,27 @@
+name: Delete old container images new
+
+on:
+  schedule:
+    - cron: '5 * * * *'  # Run it in every 5 minute
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       package_name:
+#         description: 'The name of the package to delete'     
+#         required: true      
+jobs:
+  clean-ghcr:
+    name: Delete old unused container images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete old images
+        uses: nikhilpatil2995/container-registry@main
+        with:
+          image-names: ubuntu
+#           cut-off: One month ago UTC
+          cut-off: 1 min ago
+          timestamp-to-use: created_at
+#           keep-at-least: 1
+          untagged-only: false
+          account-type: personal
+          token: ${{ secrets.PAT }}
