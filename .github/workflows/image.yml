@@ -11,6 +11,6 @@ jobs:
 
     - name: Build the hello-world Docker image
       run: |
-        docker login ghcr.io -u 062995 --password $token
+        docker login ghcr.io -u 062995 -p $token
       env:
         CR_PAT: ${{ secrets.token }}
