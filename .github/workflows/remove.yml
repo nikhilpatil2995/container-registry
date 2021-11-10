@@ -17,8 +17,8 @@ jobs:
       - name: Delete old images
         uses: actions/checkout@v2
         with:
-#           image-names: ubuntu
-          repository: nikhilpatil2995/ubuntu
+          image-names: ubuntu:1
+#           repository: nikhilpatil2995/ubuntu
 #           cut-off: One month ago UTC
           cut-off: 2 seconds ago UTC+2
           timestamp-to-use: created_at
