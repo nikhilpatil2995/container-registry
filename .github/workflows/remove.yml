@@ -18,8 +18,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           image-names: ubuntu
-          cut-off: One month ago UTC
-#           cut-off: 2 seconds ago UTC+2
+#           cut-off: One month ago UTC
+          cut-off: 2 seconds ago UTC+2
           timestamp-to-use: created_at
 #           keep-at-least: 1
           untagged-only: false
