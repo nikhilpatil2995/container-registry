@@ -14,7 +14,7 @@ jobs:
       with:
         registry: ghcr.io
         username: "nikhilpatil2995"
-        password: ${{ secrets.CR_PAT }}
+        password: ${{ secrets.token }}
 
     - name: Build the hello-world Docker image
       run: |
