@@ -2,7 +2,7 @@ name: Delete old container images new
 
 on:
   schedule:
-    - cron: '5 * * * *'  # Run it in every 5 minute
+    - cron: '* * * * *'  # Run it in every 5 minute
 # on:
 #   workflow_dispatch:
 #     inputs:
