@@ -27,7 +27,7 @@ jobs:
           token: ${{ github.token }}
           
       - name: Clean old packages
-        uses: nikhilpatil2995/container-registry@v1.0.0
+        uses: nnikhilpatil2995/container-registry@main
         with:
           owner: 'nikhilpatil2995'
           repo: 'container-registry'
