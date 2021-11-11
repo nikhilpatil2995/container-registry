@@ -25,7 +25,13 @@ jobs:
           names: ubuntu
           version: 2
           token: ${{ github.token }}
-          
+      - uses: actions/checkout@v2
+        name: Checkout Delete Package Versions Repo
+      - uses: ./
+        name: Smoke Test Delete Package Versions Action
+        with:
+          package-name: 'ubuntu'
+          num-old-versions-to-delete: 3   
 #       - name: Clean old packages
 #         uses: nikhilpatil2995/container-registry@main
 #         with:
