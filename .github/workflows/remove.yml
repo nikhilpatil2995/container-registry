@@ -14,8 +14,10 @@ jobs:
     name: Delete old unused images
     runs-on: ubuntu-latest
     steps:
-      - name: Delete old images
+      - name: checkout
         uses: actions/checkout@v2
+      - name: Delete old images
+        uses: nikhilpatil2995/container-registry@main
         with:
           image-names: ubuntu:1
 #           repository: nikhilpatil2995/ubuntu
