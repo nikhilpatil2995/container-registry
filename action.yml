@@ -105,12 +105,14 @@ branding:
 jobs:
   test:
     runs-on: ubuntu-latest
-   steps:
-      - uses: actions/delete-package-versions@v1
+    steps:
+      - name: Clean old packages
+        uses: actions/delete-package-versions@v1
         with:
-        owner: 'github'
-        repo: 'packages'
-        package-name: 'ubuntu'
-        num-old-versions-to-delete: 1
-        token: ${{ secrets.token }}
+          owner: 'github'
+          repo: 'packages'
+          package-name: 'ubuntu'
+          num-old-versions-to-delete: 1
+          token: ${{ secrets.token }}
+
 
