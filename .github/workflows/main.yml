@@ -12,7 +12,7 @@ jobs:
     steps:
 #       - uses: actions/checkout@v2
       - name: Clean old packages - keep last 3
-        uses: nikhilpatil2995/container-registry@v1.0.0
+        uses: nikhilpatil2995/container-registry@main
         with:
           keep: 1
           names: ubuntu
