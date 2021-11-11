@@ -33,7 +33,7 @@ jobs:
           name: 'ubuntu'
 #           package-version-ids: 5e4fa09a5ace924998fa600a9f9f87ffc41464bdd95482a094f21c5c6522b557
 #           num-old-versions-to-delete: 1 
-          version: 2
+          version: sha256:5e4fa09a5ace924998fa600a9f9f87ffc41464bdd95482a094f21c5c6522b557
 #       - name: Clean old packages
 #         uses: nikhilpatil2995/container-registry@main
 #         with:
