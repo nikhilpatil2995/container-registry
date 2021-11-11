@@ -17,8 +17,8 @@ jobs:
         uses: nikhilpatil2995/container-registry@main
         with:
           image-names: ubuntu
-          cut-off: 1 min ago UTC
-          timestamp-to-use: created_at
+          cut-off: 1 hour ago UTC
+          timestamp-to-use: updated_at
           untagged-only: false
           account-type: personal
           token: ${{ secrets.token }}
@@ -29,7 +29,7 @@ jobs:
       - name: Clean old packages - keep last 3
         uses: nikhilpatil2995/container-registry@main
         with:
-          version: 0
+          version: 2
           names: |
             ubuntu
             container-images
