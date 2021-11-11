@@ -16,11 +16,10 @@ jobs:
   test:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+#       - uses: actions/checkout@v2
       - name: Clean old packages - keep last 3
         uses: nikhilpatil2995/container-registry@v1.0.0
         with:
@@ -33,4 +32,4 @@ jobs:
           owner: nikhilpatil2995
           names: ubuntu
           version: 2
-          token: ${{ github.token }
+          token: ${{ github.token }}
