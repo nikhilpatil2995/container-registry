@@ -107,10 +107,10 @@ jobs:
     runs-on: ubuntu-latest
    steps:
       - uses: actions/delete-package-versions@v1
-  with:
-    owner: 'github'
-    repo: 'packages'
-    package-name: 'ubuntu'
-    num-old-versions-to-delete: 1
-    token: ${{ secrets.token }}
+        with:
+        owner: 'github'
+        repo: 'packages'
+        package-name: 'ubuntu'
+        num-old-versions-to-delete: 1
+        token: ${{ secrets.token }}
 
