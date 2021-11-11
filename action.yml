@@ -85,8 +85,10 @@ inputs:
 #       Defaults to the repo running the action.
 #     required: false
 
-  package-name: ubuntu
-  num-old-versions-to-delete: 1
+  package-name: 
+    name: ubuntu
+  num-old-versions-to-delete:
+    default: "1"
 
   token:
     required: false
