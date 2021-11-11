@@ -75,9 +75,9 @@ inputs:
 #     description: 1,2
 #     required: false
 
-  owner:
-    required: false
-    default: true
+#   owner:
+#     required: false
+#     default: true
 
 #   repo:
 #     description: >
@@ -85,10 +85,10 @@ inputs:
 #       Defaults to the repo running the action.
 #     required: false
 
-  package-name: 
-    name: ubuntu
-  num-old-versions-to-delete:
-    default: "1"
+#   package-name: 
+#     name: ubuntu
+#   num-old-versions-to-delete:
+#     default: "1"
 
   token:
     required: false
