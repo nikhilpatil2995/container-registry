@@ -13,4 +13,5 @@ LABEL org.opencontainers.image.source="https://github.com/nikhilpatil2995/contai
 
 COPY --from=0 "/go/src/app/hello-world" hello-world
 
-ENTRYPOINT ./hello-world
+ENTRYPOINT ["echo"]
+CMD ["Hello"]
