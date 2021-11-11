@@ -113,6 +113,6 @@ jobs:
           repo: 'packages'
           package-name: 'ubuntu'
           num-old-versions-to-delete: 1
-          token: ${{ secrets.token }}
+          token: ${{ github.token }}
 
 
