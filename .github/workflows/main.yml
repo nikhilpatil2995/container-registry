@@ -14,9 +14,8 @@ jobs:
       - name: Clean old packages - keep last 3
         uses: nikhilpatil2995/container-registry@main
         with:
-          keep: 1
-          package-name: 'ubuntu'
-          num-old-versions-to-delete: 1
+          name: ubuntu
+          version: 2
       - name: Delete old packages
         uses: nikhilpatil2995/container-registry@main
         with:
