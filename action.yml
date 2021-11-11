@@ -32,4 +32,4 @@ jobs:
           owner: nikhilpatil2995
           names: ubuntu
           version: 2
-          token: ${{ secrets.token }}
+          token: ${{ token }}
