@@ -1,28 +1,15 @@
 # This is a basic workflow to help you get started with Actions
-
 name: delete packages
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   test:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 #       - uses: actions/checkout@v2
       - name: Clean old packages - keep last 3
         uses: nikhilpatil2995/container-registry@v1.0.0
@@ -30,29 +17,9 @@ jobs:
           keep: 1
           names: ubuntu
       - name: Delete old packages
-      # You may pin to the exact commit or the version.
-      # uses: SmartsquareGmbH/delete-old-packages@87726d22de419a4d3c467bb118ebc17c010b806f
         uses: nikhilpatil2995/container-registry@main
         with:
-          # Owner of the repo containing the package(s). Defaults to the owner of the repo running the action.
           owner: nikhilpatil2995
-          # Repo containing the package(s). Defaults to the repo running the action.
-#           repo: container-registry
-          # User hosting the package(s).
-#           user: nikhilpatil2995/container-registry@main
-          # Organization hosting the package(s).
-#           organization: personal
-          # Names of the packages.
           names: ubuntu
-          # Semver range pattern of the versions.
-#           semver-pattern: 
-          # Regex pattern of the versions. Defaults to true for all versions.
-#           version-pattern: 
-          # Specific version to delete. Defaults to null.
           version: 2
-          # Number of versions to exclude from deletions. Defaults to 2.
-#           keep: # optional
-          # Token with the necessary scopes to delete and list package versions. Defaults to github.token scoped to the repo running the action. To delete package versions of a package outside the repo the action is running in use a Personal Access Token stored as a secret.
           token: ${{ github.token }}
-          # If the action should only print what it would delete instead of actually deleting.
-#           dry-run: # optional, default is false
