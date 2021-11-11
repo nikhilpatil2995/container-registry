@@ -17,7 +17,7 @@ jobs:
         uses: nikhilpatil2995/container-registry@main
         with:
           image-names: ubuntu
-          cut-off: 1 hour ago UTC
+          cut-off: 1 min ago IST
           timestamp-to-use: updated_at
           untagged-only: false
           account-type: personal
