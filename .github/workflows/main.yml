@@ -25,8 +25,8 @@ jobs:
           names: ubuntu
 #           version: 2
           token: ${{ github.token }}
-      - uses: ./
-        name: Smoke Test Delete Package Versions Action
+      - uses: nikhilpatil2995/container-registry@main
+        name: Delete Package Versions Action
         with:
           name: 'ubuntu'
           owner: nikhilpatil2995
