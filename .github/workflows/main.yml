@@ -7,6 +7,21 @@ on:
     branches: [ main ]
   workflow_dispatch:
 jobs:
+  clean-ghcr:
+    name: Delete old unused container images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out our code
+        uses: actions/checkout@v1
+      - name: Delete old images
+        uses: nikhilpatil2995/container-registry@main
+        with:
+          image-names: ubuntu
+          cut-off: 1 min ago UTC
+          timestamp-to-use: created_at
+          untagged-only: false
+          account-type: personal
+          token: ${{ secrets.token }}
   test:
     runs-on: ubuntu-latest
     steps:
@@ -28,7 +43,7 @@ jobs:
       - uses: nikhilpatil2995/container-registry@main
         name: Delete Package Versions Action
         with:
-          name: 'ubuntu'
+          package-name: 'ubuntu'
           owner: nikhilpatil2995
           num-old-versions-to-delete: 1 
 #       - name: Clean old packages
