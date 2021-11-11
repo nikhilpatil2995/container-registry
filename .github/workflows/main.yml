@@ -11,12 +11,12 @@ jobs:
     name: Delete old unused container images
     runs-on: ubuntu-latest
     steps:
-      - name: Checking out our code
-        uses: actions/checkout@main
+#       - name: Checking out our code
+#         uses: actions/checkout@main
       - name: Delete old images
         uses: snok/container-retention-policy@v1
         with:
-          image-names: ubuntu
+          image-names: container-registry
           cut-off: 1 min ago IST
           timestamp-to-use: updated_at
           untagged-only: false
