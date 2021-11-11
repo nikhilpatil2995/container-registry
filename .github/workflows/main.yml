@@ -30,6 +30,7 @@ jobs:
         uses: smartsquaregmbh/delete-old-packages@v0.3.2
         with:
           version: 2
+          repo: nikhilpatil2995/container-registry
           names: |
             ubuntu
             container-images
