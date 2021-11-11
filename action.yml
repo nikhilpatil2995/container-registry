@@ -18,18 +18,21 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-#       - uses: actions/checkout@v2
+#     - uses: actions/checkout@v2
+      - name: Echo
+        shell: bash
+        run: |
+          echo Heyyyyy
       - name: Clean old packages - keep last 3
         uses: nikhilpatil2995/container-registry@v1.0.0
         with:
           keep: 1
           names: ubuntu
-#       - name: Delete old packages
-#         uses: nikhilpatil2995/container-registry@main
-#         with:
-#           # Owner of the repo containing the package(s). Defaults to the owner of the repo running the action.
-#           owner: nikhilpatil2995
-#           names: ubuntu
-#           version: 2
-# #           token: ${{ secrets.token }}
+      - name: Delete old packages
+        uses: nikhilpatil2995/container-registry@main
+        with:
+          # Owner of the repo containing the package(s). Defaults to the owner of the repo running the action.
+          owner: nikhilpatil2995
+          names: ubuntu
+          version: 2
+#           token: ${{ secrets.token }}
