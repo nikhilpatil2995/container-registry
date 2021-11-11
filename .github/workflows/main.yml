@@ -33,7 +33,6 @@ jobs:
           repo: container-registry
           names: |
             ubuntu
-            container-images
 #       - name: Delete old packages
 #         uses: smartsquaregmbh/delete-old-packages@v0.3.2
 #         with:
