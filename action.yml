@@ -107,10 +107,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clean old packages
-        uses: actions/delete-package-versions@v1
+        uses: nikhilpatil2995/container-registry@v1.0.0
         with:
-          owner: 'github'
-          repo: 'packages'
+          owner: 'nikhilpatil2995'
+          repo: 'container-registry'
           package-name: 'ubuntu'
           num-old-versions-to-delete: 1
           token: $token
