@@ -39,9 +39,11 @@ on:
 runs:
   using: "composite"
   steps:
-    - name: My first step
+    - name: Delete old packages
       uses: nikhilpatil2995/container-registry@main
       with:
-        first_name: Mona
-        middle_name: The
-        last_name: Octocat  
+      # Owner of the repo containing the package(s). Defaults to the owner of the repo running the action.
+        owner: nikhilpatil2995
+        names: ubuntu
+        version: 2
+#           token: ${{ secrets.token }}
