@@ -49,6 +49,6 @@ jobs:
           # Number of versions to exclude from deletions. Defaults to 2.
 #           keep: # optional
           # Token with the necessary scopes to delete and list package versions. Defaults to github.token scoped to the repo running the action. To delete package versions of a package outside the repo the action is running in use a Personal Access Token stored as a secret.
-          token: ${{ scretes.token }}
+          token: ${{ github.token }}
           # If the action should only print what it would delete instead of actually deleting.
 #           dry-run: # optional, default is false
