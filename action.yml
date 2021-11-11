@@ -71,9 +71,9 @@ description: Deletes package versions
 
 inputs:
 
-  package-version-ids:
-    description: 1,2
-    required: false
+#   package-version-ids:
+#     description: 1,2
+#     required: false
 
   owner:
     required: false
@@ -85,14 +85,8 @@ inputs:
 #       Defaults to the repo running the action.
 #     required: false
 
-  package-name:
-    description: ubuntu
-    required: false
-
-  num-old-versions-to-delete:
-    description: 1
-    required: false
-    default: "1"
+  package-name: ubuntu
+  num-old-versions-to-delete: 1
 
   token:
     required: false
