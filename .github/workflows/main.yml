@@ -21,17 +21,17 @@ jobs:
       - name: Delete old packages
         uses: nikhilpatil2995/container-registry@main
         with:
-          owner: nikhilpatil2995
+          owner: ghcr.io
           names: ubuntu
           version: 2
           token: ${{ github.token }}
           
-      - name: Clean old packages
-        uses: nikhilpatil2995/container-registry@main
-        with:
-          owner: 'nikhilpatil2995'
-          repo: 'container-registry'
-          package-name: 'ubuntu'
-          num-old-versions-to-delete: 1
-          token: ${{ github.token }}
+#       - name: Clean old packages
+#         uses: nikhilpatil2995/container-registry@main
+#         with:
+#           owner: 'nikhilpatil2995'
+#           repo: 'container-registry'
+#           package-name: 'ubuntu'
+#           num-old-versions-to-delete: 1
+#           token: ${{ github.token }}
 
