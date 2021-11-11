@@ -93,6 +93,12 @@ inputs:
   token:
     required: false
     default: ${{ github.token }}
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
 
 runs:
   using: node12
