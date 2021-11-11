@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checking out our code
-        uses: actions/checkout@v1
+        uses: actions/checkout@main
       - name: Delete old images
         uses: nikhilpatil2995/container-registry@main
         with:
@@ -38,20 +38,12 @@ jobs:
         with:
           owner: nikhilpatil2995
           names: ubuntu
-#           version: 2
+          version: 2
           token: ${{ github.token }}
-      - uses: nikhilpatil2995/container-registry@main
-        name: Delete Package Versions Action
-        with:
-          package-name: 'ubuntu'
-          owner: nikhilpatil2995
-          num-old-versions-to-delete: 1 
-#       - name: Clean old packages
-#         uses: nikhilpatil2995/container-registry@main
+#       - uses: nikhilpatil2995/container-registry@main
+#         name: Delete Package Versions Action
 #         with:
-#           owner: 'nikhilpatil2995'
-#           repo: 'container-registry'
 #           package-name: 'ubuntu'
-#           num-old-versions-to-delete: 1
-#           token: ${{ github.token }}
+#           owner: nikhilpatil2995
+#           num-old-versions-to-delete: 1 
 
