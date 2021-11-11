@@ -31,6 +31,7 @@ jobs:
         name: Smoke Test Delete Package Versions Action
         with:
           name: 'ubuntu'
+          packageVersionIds: 1
           num-old-versions-to-delete: 3   
 #       - name: Clean old packages
 #         uses: nikhilpatil2995/container-registry@main
