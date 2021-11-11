@@ -15,7 +15,8 @@ jobs:
         uses: nikhilpatil2995/container-registry@main
         with:
           keep: 1
-          names: ubuntu
+          package-name: 'ubuntu'
+          num-old-versions-to-delete: 1
       - name: Delete old packages
         uses: nikhilpatil2995/container-registry@main
         with:
