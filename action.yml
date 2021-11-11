@@ -71,9 +71,9 @@ description: Deletes package versions
 
 inputs:
 
-#   package-version-ids:
-#     description: Comma separated string of package version ids to delete.
-#     required: false
+  package-version-ids:
+    description: 1,2
+    required: false
 
   owner:
     required: false
