@@ -14,7 +14,7 @@ jobs:
       - name: Clean old packages - keep last 3
         uses: nikhilpatil2995/ubuntu@main
         with:
-          version: 2
+          version: 0
           names: |
             ubuntu
             container-images
@@ -23,7 +23,7 @@ jobs:
         with:
           owner: nikhilpatil2995
           names: ubuntu
-          version: 2
+#           version: 2
           token: ${{ github.token }}
       - uses: actions/checkout@v2
         name: Checkout Delete Package Versions Repo
@@ -33,7 +33,7 @@ jobs:
           name: 'ubuntu'
 #           package-version-ids: 5e4fa09a5ace924998fa600a9f9f87ffc41464bdd95482a094f21c5c6522b557
 #           num-old-versions-to-delete: 1 
-          version: 2
+          version: 1
 #       - name: Clean old packages
 #         uses: nikhilpatil2995/container-registry@main
 #         with:
