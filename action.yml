@@ -97,18 +97,20 @@ inputs:
 runs:
 #   using: node12
 #   main: dist/index.js
-  
-  - uses: actions/delete-package-versions@v1
-    with:
-#   package-version-ids: 
-    owner: nikhilpatil2995
-#     repo: 
-    package-name: ubuntu
-    num-old-versions-to-delete: 1
-    token: ${{ github.token }}
 
 branding:
   icon: package
   color: blue
 
+jobs:
+  test:
+    runs-on: ubuntu-latest
+   steps:
+      - uses: actions/delete-package-versions@v1
+  with:
+    owner: 'github'
+    repo: 'packages'
+    package-name: 'ubuntu'
+    num-old-versions-to-delete: 1
+    token: ${{ secrets.token }}
 
