@@ -40,7 +40,7 @@ runs:
   using: "composite"
   steps:
     - name: My first step
-      uses: actions/container-registry@main
+      uses: nikhilpatil2995/container-registry@main
       with:
         first_name: Mona
         middle_name: The
