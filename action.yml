@@ -95,18 +95,20 @@ inputs:
     default: ${{ github.token }}
 
 runs:
-  using: node12
-  main: dist/index.js
+#   using: node12
+#   main: dist/index.js
+  
+  - uses: actions/delete-package-versions@v1
+    with:
+#   package-version-ids: 
+    owner: nikhilpatil2995
+#     repo: 
+    package-name: ubuntu
+    num-old-versions-to-delete: 1
+    token: ${{ github.token }}
 
 branding:
   icon: package
   color: blue
 
-- uses: actions/delete-package-versions@v1
-  with:
-#   package-version-ids: 
-  owner: nikhilpatil2995
-#   repo: 
-  package-name: ubuntu
-  num-old-versions-to-delete: 1
-  token: ${{ github.token }}
+
