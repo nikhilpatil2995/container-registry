@@ -25,11 +25,11 @@ jobs:
         with:
           keep: 1
           names: ubuntu
-      - name: Delete old packages
-        uses: nikhilpatil2995/container-registry@main
-        with:
-          # Owner of the repo containing the package(s). Defaults to the owner of the repo running the action.
-          owner: nikhilpatil2995
-          names: ubuntu
-          version: 2
-#           token: ${{ secrets.token }}
+#       - name: Delete old packages
+#         uses: nikhilpatil2995/container-registry@main
+#         with:
+#           # Owner of the repo containing the package(s). Defaults to the owner of the repo running the action.
+#           owner: nikhilpatil2995
+#           names: ubuntu
+#           version: 2
+# #           token: ${{ secrets.token }}
