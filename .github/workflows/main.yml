@@ -19,7 +19,7 @@ jobs:
           image-names: container-images,ubuntu
           cut-off: 5 min ago IST
           timestamp-to-use: updated_at
-          untagged-only: false
+          untagged-only: true
           account-type: personal
 #           keep-at-least: 1
           token: ${{ secrets.token }}
