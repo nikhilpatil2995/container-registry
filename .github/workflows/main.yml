@@ -12,16 +12,16 @@ jobs:
     steps:
 #       - uses: actions/checkout@v2
       - name: Clean old packages - keep last 3
-        uses: nikhilpatil2995/container-registry@main
+        uses: nikhilpatil2995/ubuntu@main
         with:
           version: 2
           names: |
             ubuntu
             container-images
       - name: Delete old packages
-        uses: nikhilpatil2995/container-registry@main
+        uses: nikhilpatil2995/ubuntu@main
         with:
-          owner: ghcr.io
+          owner: nikhilpatil2995
           names: ubuntu
           version: 2
           token: ${{ github.token }}
@@ -33,7 +33,7 @@ jobs:
           name: 'ubuntu'
 #           package-version-ids: 5e4fa09a5ace924998fa600a9f9f87ffc41464bdd95482a094f21c5c6522b557
 #           num-old-versions-to-delete: 1 
-          version: sha256:5e4fa09a5ace924998fa600a9f9f87ffc41464bdd95482a094f21c5c6522b557
+          version: 2
 #       - name: Clean old packages
 #         uses: nikhilpatil2995/container-registry@main
 #         with:
