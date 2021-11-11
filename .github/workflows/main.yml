@@ -31,11 +31,11 @@ jobs:
         uses: nikhilpatil2995/container-registry@main
         with:
           # Owner of the repo containing the package(s). Defaults to the owner of the repo running the action.
-          owner: nikhilpatil2995
+#           owner: nikhilpatil2995
           # Repo containing the package(s). Defaults to the repo running the action.
-          repo: container-registry
+#           repo: container-registry
           # User hosting the package(s).
-          user: nikhilpatil2995/container-registry@main
+#           user: nikhilpatil2995/container-registry@main
           # Organization hosting the package(s).
           organization: personal
           # Names of the packages.
